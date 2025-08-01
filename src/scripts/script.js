@@ -13,12 +13,14 @@ document.addEventListener('DOMContentLoaded', function () {
             ocultaElementosDoHeader();
         } else {
             exibirElementosDoHeader();
-        }
+        } 
     })
 
     // Seção de alterações, programação das abas
     for (let i = 0; i < buttons.length; i++) {
+
         buttons[i].addEventListener('click', function (botao) {
+
             const abaAlvo = botao.target.dataset.tabButton;
             const aba = document.querySelector(`[data-tab-id=${abaAlvo}]`);
             escondeTodasAsAbas();
